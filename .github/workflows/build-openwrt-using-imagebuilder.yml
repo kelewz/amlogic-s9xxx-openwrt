@@ -15,7 +15,7 @@ on:
       releases_branch:
         description: "Select the releases branch"
         required: false
-        default: "openwrt:24.10.2"
+        default: "openwrt:24.10.0"
         type: choice
         options:
           - openwrt:24.10.2
@@ -27,7 +27,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "wxy-oect"
         type: choice
         options:
           - all
@@ -203,11 +203,6 @@ on:
           - 6.1.y_6.12.y
           - 6.1.y_6.6.y
           - 6.6.y_6.12.y
-      auto_kernel:
-        description: "Auto use the latest kernel"
-        required: false
-        default: true
-        type: boolean
       kernel_repo:
         description: "Set the kernel repository"
         required: false
@@ -228,7 +223,7 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "kkoect"
         type: choice
         options:
           - ophub
