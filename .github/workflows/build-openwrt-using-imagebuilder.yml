@@ -24,6 +24,7 @@ on:
           - immortalwrt:24.10.2
           - immortalwrt:24.10.1
           - immortalwrt:24.10.0
+          - openwrt:22.03.7
       openwrt_board:
         description: "Select device board"
         required: false
@@ -220,6 +221,7 @@ on:
           - flippy
           - dev
           - beta
+          - rk35xx
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
