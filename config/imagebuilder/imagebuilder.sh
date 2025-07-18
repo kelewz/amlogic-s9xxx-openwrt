@@ -64,12 +64,12 @@ download_imagebuilder() {
     echo -e "${STEPS} Start downloading OpenWrt files..."
 
     # Downloading imagebuilder files
-    download_file="https://downloads.openwrt.org/releases/22.03.7/targets/rockchip/armv8/openwrt-imagebuilder-22.03.7-rockchip-armv8.Linux-x86_64.tar.xz"
+    download_file="https://mirror-03.infra.openwrt.org/releases/24.10.0/targets/rockchip/armv8/openwrt-imagebuilder-24.10.0-rockchip-armv8.Linux-x86_64.tar.zst"
     curl -fsSOL ${download_file}
     [[ "${?}" -eq "0" ]] || error_msg "Download failed: [ ${download_file} ]"
 
     # Unzip and change the directory name
-    tar -I zstd -xvf *-imagebuilder-*.tar.zst -C . && sync && rm -f *-imagebuilder-*.tar.xz
+    tar -I zstd -xvf *-imagebuilder-*.tar.zst -C . && sync && rm -f *-imagebuilder-*.tar.zst
     mv -f *-imagebuilder-* ${openwrt_dir}
 
     sync && sleep 3
